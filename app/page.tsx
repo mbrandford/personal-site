@@ -93,7 +93,7 @@ export default function Home() {
           id: "2021-nike",
           title: "Nike.com search",
           description:
-            "What additional value can we deliver to shoppers through search? I led a cross-functional team across Engineering, Design, and Data Science to roadmap and ship improved results for the most common search intents. I combined usage data, customer interviews, and competitive analysis to prioritize changes impacting ~18M visits per year.",
+            "What additional value can we deliver to shoppers through search? I led a cross-functional team across Engineering, Design, and Data Science to roadmap and ship improved results for the most common search intents.",
           mediaSrc: "/projects/nike-search.mov",
         },
       ],
@@ -404,7 +404,7 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden snap-y snap-mandatory overflow-y-scroll" style={{ height: '100dvh' }}>
+      <div className="lg:hidden snap-y snap-mandatory overflow-y-scroll bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Sticky Name Header */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
