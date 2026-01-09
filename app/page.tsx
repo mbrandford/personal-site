@@ -117,7 +117,7 @@ export default function Home() {
           id: "2019-google-assistant",
           title: "Google Assistant",
           description:
-            "How can Google grow and differentiate its AI assistant against first-movers Alexa and Siri? I identified the value propositions and use cases that resonated most for Google Assistant relative to competitors, ran 30+ creative focus groups across the US, and synthesized the work into a positioning report delivered to the VP of Global Marketing.",
+            "How can Google grow and differentiate its AI assistant against first-movers Alexa and Siri? I identified the value propositions and use cases that resonated most for Google Assistant relative to competitors, and ran 30+ creative focus groups across the US.",
           mediaSrc: "/projects/google-assistant.mov",
         },
       ],
