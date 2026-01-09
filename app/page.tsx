@@ -404,14 +404,14 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden overflow-y-scroll bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
+      <div className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Sticky Name Header */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
         </div>
 
         {/* Header Section */}
-        <div className="min-h-[100dvh] px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
+        <div className="min-h-[100dvh] snap-start px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
           {/* About */}
           <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
@@ -484,7 +484,7 @@ export default function Home() {
             {group.items.map((project) => (
               <div
                 key={project.id}
-                className="min-h-[90vh] flex flex-col justify-center py-8 bg-white"
+                className="min-h-[100dvh] snap-start flex flex-col justify-center py-8 bg-white"
               >
                 {/* Title Section */}
                 <div className="px-6 mb-4">
