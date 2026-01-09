@@ -454,6 +454,13 @@ export default function Home() {
           <div className="py-8 text-neutral-500 text-sm">
             ////////////////
           </div>
+
+          {/* Down Arrow - Mobile Only */}
+          <div className="text-left">
+            <div className="text-neutral-400 text-2xl animate-bounce">
+              ↓
+            </div>
+          </div>
         </div>
 
         {/* Sticky Projects Header */}
@@ -490,7 +497,7 @@ export default function Home() {
                 <div className="px-6 mb-4">
                   <video
                     src={project.mediaSrc}
-                    className="w-full h-auto rounded-lg shadow-lg"
+                    className="w-[80%] h-auto rounded-lg shadow-lg"
                     autoPlay
                     loop
                     muted
