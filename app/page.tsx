@@ -5,8 +5,10 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
   const projectRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
   const lastActiveProjectRef = useRef<{
     id: string;
     title: string;
@@ -22,7 +24,7 @@ export default function Home() {
           id: "2025-figma-make",
           title: "Figma Make",
           description:
-            "How can Figma Make stand out in a fast-shifting landscape of prompt-to-prototype AI tools? I ran a global study shortly after launch to map awareness, adoption, and perceptions across the competitive set, then built the positioning framework for Product and Marketing to resonate with new users and inflect growth.",
+            "How can Figma Make stand out in a quickly-shifting landscape of prompt-to-prototype AI tools? I ran a global study shortly after launch to map awareness, adoption, and perceptions across the competitive set, then built the positioning framework for Product and Marketing to resonate with new users and inflect growth.",
           mediaSrc: "/projects/figma-make.mov",
         },
         {
@@ -91,7 +93,7 @@ export default function Home() {
           id: "2021-nike",
           title: "Nike.com search",
           description:
-            "What additional value can we deliver to shoppers through search? I led a cross-functional team across Engineering, Design, and Data Science to roadmap and ship improved results for the most common search intents. I combined usage data, customer interviews, and competitive analysis to prioritize changes impacting ~18M visits per year and driving ~$14M in incremental revenue.",
+            "What additional value can we deliver to shoppers through search? I led a cross-functional team across Engineering, Design, and Data Science to roadmap and ship improved results for the most common search intents. I combined usage data, customer interviews, and competitive analysis to prioritize changes impacting ~18M visits per year.",
           mediaSrc: "/projects/nike-search.mov",
         },
       ],
@@ -230,6 +232,28 @@ export default function Home() {
       }
     };
   }, [activeProjectId, hasScrolled]);
+
+  // Mobile footer observer to hide sticky headers when footer is visible
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsFooterVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of footer is visible
+      }
+    );
+
+    observer.observe(footerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const setProjectRef = (id: string) => (el: HTMLDivElement | null) => {
     if (el) {
@@ -380,14 +404,14 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden snap-y snap-mandatory overflow-y-scroll" style={{ height: '100vh' }}>
+      <div className="lg:hidden snap-y snap-mandatory overflow-y-scroll" style={{ height: '100dvh' }}>
         {/* Sticky Name Header */}
-        <div className="sticky top-0 z-20 bg-white px-6 py-2">
+        <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
         </div>
 
         {/* Header Section */}
-        <div className="snap-start min-h-screen px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
+        <div className="snap-start min-h-[100dvh] px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
           {/* About */}
           <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
@@ -433,7 +457,7 @@ export default function Home() {
         </div>
 
         {/* Sticky Projects Header */}
-        <div className="sticky top-[34px] z-10 bg-white px-6 py-2">
+        <div className={`sticky top-[34px] z-10 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <div className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
             Projects
           </div>
@@ -443,7 +467,7 @@ export default function Home() {
         {projectsData.map((group) => (
           <div key={group.year}>
             {/* Sticky Year Header */}
-            <div className="sticky top-[68px] z-[5] bg-white px-6 py-2">
+            <div className={`sticky top-[68px] z-[5] bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
               <div className="text-sm font-medium text-neutral-500">
                 {group.year}
               </div>
@@ -453,7 +477,7 @@ export default function Home() {
             {group.items.map((project) => (
               <div
                 key={project.id}
-                className="snap-start min-h-screen flex flex-col justify-center py-4 bg-white"
+                className="snap-start min-h-[100dvh] flex flex-col justify-center py-4 bg-white"
               >
                 {/* Video Section */}
                 <div className="flex items-center justify-center px-6 mb-4">
@@ -484,7 +508,7 @@ export default function Home() {
         ))}
         
         {/* Gradient footer spacer */}
-        <div className="snap-start min-h-screen bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
+        <div ref={footerRef} className="snap-start min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
       </div>
 
       <style jsx>{`
