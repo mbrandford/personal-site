@@ -6,7 +6,9 @@ export default function Home() {
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [visibleMobileVideoId, setVisibleMobileVideoId] = useState<string | null>(null);
   const projectRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const mobileVideoRefs = useRef<Map<string, HTMLVideoElement>>(new Map());
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const footerRef = useRef<HTMLDivElement | null>(null);
   const lastActiveProjectRef = useRef<{
@@ -255,6 +257,57 @@ export default function Home() {
     };
   }, []);
 
+  // Mobile video lazy loading - only play videos that are in viewport
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    // Only run on mobile
+    if (window.innerWidth >= 1024) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Video must be 50% visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const videoElement = entry.target as HTMLVideoElement;
+        const videoId = videoElement.dataset.videoId;
+
+        if (entry.isIntersecting && videoId) {
+          // Video is visible - set as visible and play
+          setVisibleMobileVideoId(videoId);
+          videoElement.play().catch(() => {
+            // Ignore play errors
+          });
+        } else {
+          // Video is not visible - pause it
+          videoElement.pause();
+        }
+      });
+    }, observerOptions);
+
+    // Observe all mobile video elements
+    mobileVideoRefs.current.forEach((video) => {
+      if (video) {
+        observer.observe(video);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const setMobileVideoRef = (id: string) => (el: HTMLVideoElement | null) => {
+    if (el) {
+      mobileVideoRefs.current.set(id, el);
+    } else {
+      mobileVideoRefs.current.delete(id);
+    }
+  };
+
   const setProjectRef = (id: string) => (el: HTMLDivElement | null) => {
     if (el) {
       projectRefs.current.set(id, el);
@@ -496,12 +549,14 @@ export default function Home() {
                 {/* Video Section */}
                 <div className="px-6 mb-4">
                   <video
+                    ref={setMobileVideoRef(project.id)}
+                    data-video-id={project.id}
                     src={project.mediaSrc}
                     className="w-[80%] h-auto rounded-lg shadow-lg"
-                    autoPlay
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                   />
                 </div>
 
