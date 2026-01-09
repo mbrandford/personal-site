@@ -344,7 +344,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and drive company strategy.
+              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and set company direction.
             </p>
           </section>
 
@@ -469,7 +469,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and drive company strategy.
+              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and set company direction.
             </p>
           </section>
 
