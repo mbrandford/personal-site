@@ -291,9 +291,9 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              I'm an interdisciplinary researcher helping chart the path forward for disruptive tech
+              I'm an interdisciplinary researcher charting the path forward for disruptive tech
               products. I lead end-to-end studies around product, marketing, and business
-              questions to uncover opportunities and drive company strategy.
+              questions to guide critical decisions and drive company strategy.
             </p>
           </section>
 
@@ -418,9 +418,9 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              I'm an interdisciplinary researcher helping chart the path forward for disruptive tech
+              I'm an interdisciplinary researcher charting the path forward for disruptive tech
               products. I lead end-to-end studies around product, marketing, and business
-              questions to uncover opportunities and drive company strategy.
+              questions to guide critical decisions and drive company strategy.
             </p>
           </section>
 
