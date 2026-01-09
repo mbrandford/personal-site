@@ -404,14 +404,14 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden snap-y snap-mandatory overflow-y-scroll bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
+      <div className="lg:hidden overflow-y-scroll bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Sticky Name Header */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
         </div>
 
         {/* Header Section */}
-        <div className="snap-start min-h-[100dvh] px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
+        <div className="min-h-[100dvh] px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
           {/* About */}
           <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
@@ -477,27 +477,29 @@ export default function Home() {
             {group.items.map((project) => (
               <div
                 key={project.id}
-                className="snap-start min-h-[100dvh] flex flex-col justify-center py-4 bg-white"
+                className="min-h-[90vh] flex flex-col justify-center py-8 bg-white"
               >
-                {/* Video Section */}
-                <div className="flex items-center justify-center px-6 mb-4">
-                  <div className="w-full max-w-md">
-                    <video
-                      src={project.mediaSrc}
-                      className="w-full h-auto rounded-lg shadow-lg"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    />
-                  </div>
-                </div>
-
-                {/* Text Section */}
-                <div className="px-6 space-y-3">
+                {/* Title Section */}
+                <div className="px-6 mb-4">
                   <h3 className="text-xl font-medium text-black">
                     {project.title}
                   </h3>
+                </div>
+
+                {/* Video Section */}
+                <div className="px-6 mb-4">
+                  <video
+                    src={project.mediaSrc}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                </div>
+
+                {/* Description Section */}
+                <div className="px-6 space-y-3">
                   <p className="text-sm text-neutral-600 leading-relaxed">
                     {project.description}
                   </p>
@@ -508,7 +510,7 @@ export default function Home() {
         ))}
         
         {/* Gradient footer spacer */}
-        <div ref={footerRef} className="snap-start min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
+        <div ref={footerRef} className="min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
       </div>
 
       <style jsx>{`
