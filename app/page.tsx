@@ -344,7 +344,12 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and set company direction.
+              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
+            </p>
+            <p className="text-sm leading-relaxed text-neutral-500 pt-2">
+              Currently: [Research] at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
+              <br />
+              Previously: [Digital Product] at <a href="https://nike.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Nike</a>, [Student] at <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Berkeley Haas</a>, [Insights] at <a href="https://known.is" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Known</a>.
             </p>
           </section>
 
@@ -469,7 +474,12 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              Interdisciplinary strategist charting the path forward for disruptive tech products. I lead end-to-end engagements around product, marketing, and business questions to guide critical decisions and set company direction.
+              Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
+            </p>
+            <p className="text-sm leading-relaxed text-neutral-500 pt-2">
+              Currently: [Research] at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
+              <br />
+              Previously: [Digital Product] at <a href="https://nike.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Nike</a>, [Student] at <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Berkeley Haas</a>, [Insights] at <a href="https://known.is" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Known</a>.
             </p>
           </section>
 
