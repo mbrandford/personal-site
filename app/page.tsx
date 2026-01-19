@@ -569,7 +569,7 @@ export default function Home() {
                     ref={setMobileVideoRef(project.id)}
                     data-video-id={project.id}
                     src={project.mediaSrc}
-                    className="w-[80%] h-auto rounded-lg shadow-lg"
+                    className="w-[90%] h-auto rounded-lg shadow-lg"
                     loop
                     muted
                     playsInline
