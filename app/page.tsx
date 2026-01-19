@@ -596,11 +596,8 @@ export default function Home() {
           </div>
         ))}
         
-        {/* Large white spacer to ensure gradient is completely off-screen */}
-        <div className="h-[200vh] bg-white"></div>
-        
-        {/* Gradient footer spacer WITHOUT snap */}
-        <div ref={footerRef} className="min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
+        {/* Large white spacer on mobile - no gradient */}
+        <div ref={footerRef} className="h-[300vh] bg-white"></div>
       </div>
 
       <style jsx>{`
