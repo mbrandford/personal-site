@@ -348,7 +348,7 @@ export default function Home() {
   const thirdLastProjectId = allProjects[allProjects.length - 3]?.id;
 
   return (
-    <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900 flex flex-col">
+    <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900">
       {/* Desktop Layout */}
       <div className="hidden lg:block relative max-w-[1600px] mx-auto w-full">
         <div className="max-w-xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
