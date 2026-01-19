@@ -586,8 +586,8 @@ export default function Home() {
         {/* Large white spacer to ensure gradient is completely off-screen */}
         <div className="h-[200vh] bg-white"></div>
         
-        {/* Gradient footer spacer with snap */}
-        <div ref={footerRef} className="min-h-[100dvh] snap-start bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
+        {/* Gradient footer spacer WITHOUT snap */}
+        <div ref={footerRef} className="min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
       </div>
 
       <style jsx>{`
