@@ -6,7 +6,6 @@ export default function Home() {
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
-  const [visibleMobileVideoId, setVisibleMobileVideoId] = useState<string | null>(null);
   const projectRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   const mobileVideoRefs = useRef<Map<string, HTMLVideoElement>>(new Map());
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -277,8 +276,7 @@ export default function Home() {
         const videoId = videoElement.dataset.videoId;
 
         if (entry.isIntersecting && videoId) {
-          // Video is visible - set as visible and play
-          setVisibleMobileVideoId(videoId);
+          // Video is visible - play
           videoElement.play().catch(() => {
             // Ignore play errors
           });
@@ -340,12 +338,6 @@ export default function Home() {
 
   // Use the last active project for display to allow fade-out animation
   const displayProject = activeProject || lastActiveProjectRef.current;
-
-  // Get the ID of the very last project across all groups
-  const allProjects = projectsData.flatMap((group) => group.items);
-  const lastProjectId = allProjects[allProjects.length - 1]?.id;
-  const secondLastProjectId = allProjects[allProjects.length - 2]?.id;
-  const thirdLastProjectId = allProjects[allProjects.length - 3]?.id;
 
   return (
     <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900">
@@ -599,22 +591,6 @@ export default function Home() {
         {/* Large white spacer on mobile - no gradient */}
         <div ref={footerRef} className="h-[300vh] bg-white"></div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(12px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out;
-        }
-      `}</style>
     </main>
   );
 }
