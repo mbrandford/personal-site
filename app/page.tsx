@@ -473,7 +473,7 @@ export default function Home() {
         </div>
 
         {/* Header Section */}
-        <div className="min-h-[100dvh] snap-start px-6 pt-16 pb-12 space-y-12 flex flex-col justify-center bg-white">
+        <div className="min-h-[110dvh] snap-start px-6 pt-16 pb-24 space-y-12 flex flex-col justify-center bg-white">
           {/* About */}
           <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
