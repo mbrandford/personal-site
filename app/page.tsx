@@ -328,6 +328,12 @@ export default function Home() {
   // Use the last active project for display to allow fade-out animation
   const displayProject = activeProject || lastActiveProjectRef.current;
 
+  // Get the ID of the very last project across all groups
+  const allProjects = projectsData.flatMap((group) => group.items);
+  const lastProjectId = allProjects[allProjects.length - 1]?.id;
+  const secondLastProjectId = allProjects[allProjects.length - 2]?.id;
+  const thirdLastProjectId = allProjects[allProjects.length - 3]?.id;
+
   return (
     <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900 flex flex-col">
       {/* Desktop Layout */}
@@ -460,7 +466,7 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-[#f9a8d4]" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
+      <div className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Sticky Name Header */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
@@ -577,8 +583,8 @@ export default function Home() {
           </div>
         ))}
         
-        {/* Gradient footer spacer */}
-        <div ref={footerRef} className="min-h-[100dvh] bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
+        {/* Gradient footer spacer with snap */}
+        <div ref={footerRef} className="min-h-[100dvh] snap-start bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
       </div>
 
       <style jsx>{`
