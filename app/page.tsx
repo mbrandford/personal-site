@@ -11,6 +11,7 @@ export default function Home() {
   const mobileVideoRefs = useRef<Map<string, HTMLVideoElement>>(new Map());
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const footerRef = useRef<HTMLDivElement | null>(null);
+  const mobileScrollRef = useRef<HTMLDivElement | null>(null);
   const lastActiveProjectRef = useRef<{
     id: string;
     title: string;
@@ -300,6 +301,18 @@ export default function Home() {
     };
   }, []);
 
+  // Force mobile scroll to top on mount (Safari fix)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    // Only run on mobile
+    if (window.innerWidth >= 1024) return;
+
+    if (mobileScrollRef.current) {
+      mobileScrollRef.current.scrollTop = 0;
+    }
+  }, []);
+
   const setMobileVideoRef = (id: string) => (el: HTMLVideoElement | null) => {
     if (el) {
       mobileVideoRefs.current.set(id, el);
@@ -466,7 +479,7 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
+      <div ref={mobileScrollRef} className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Sticky Name Header */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
