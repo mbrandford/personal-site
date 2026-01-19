@@ -473,7 +473,7 @@ export default function Home() {
         </div>
 
         {/* Header Section */}
-        <div className="min-h-[120dvh] snap-start px-6 pt-16 pb-24 space-y-12 flex flex-col justify-center bg-white">
+        <div className="min-h-[100dvh] snap-start px-6 pt-16 pb-24 space-y-12 flex flex-col justify-center bg-white">
           {/* About */}
           <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
@@ -583,8 +583,8 @@ export default function Home() {
           </div>
         ))}
         
-        {/* White buffer before gradient */}
-        <div className="min-h-[20vh] bg-white"></div>
+        {/* Large white spacer to ensure gradient is completely off-screen */}
+        <div className="h-[200vh] bg-white"></div>
         
         {/* Gradient footer spacer with snap */}
         <div ref={footerRef} className="min-h-[100dvh] snap-start bg-[linear-gradient(to_bottom,white_0%,#fef7f7_25%,#fce7f3_50%,#f9a8d4_100%)]"></div>
