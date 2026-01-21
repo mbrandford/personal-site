@@ -486,15 +486,18 @@ export default function Home() {
 
       {/* Mobile Layout with Single Scroll */}
       <div ref={mobileScrollRef} className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
-        {/* Sticky Name Header */}
+        {/* Top Spacer to push content down initially */}
+        <div className="h-32 bg-white snap-start"></div>
+        
+        {/* Sticky Name Header - sticks at top throughout scroll */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
         </div>
 
-        {/* Header Section */}
-        <div className="min-h-[100dvh] snap-start px-6 pt-16 pb-24 space-y-12 flex flex-col justify-center bg-white">
-          {/* About */}
-          <section className="space-y-2">
+        {/* Header Section Content */}
+        <div className="px-6 pt-8 pb-16 space-y-6 bg-white">
+            {/* About */}
+            <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
               About
             </h2>
@@ -535,7 +538,7 @@ export default function Home() {
           </div>
 
           {/* Divider */}
-          <div className="py-8 text-neutral-500 text-sm">
+          <div className="py-4 text-neutral-500 text-sm">
             ////////////////
           </div>
 
@@ -553,6 +556,9 @@ export default function Home() {
             Projects
           </div>
         </div>
+
+        {/* Spacer between Projects and first year */}
+        <div className="h-[15vh] bg-white"></div>
 
         {/* Projects by Year */}
         {projectsData.map((group) => (
