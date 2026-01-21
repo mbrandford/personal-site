@@ -487,7 +487,7 @@ export default function Home() {
       {/* Mobile Layout with Single Scroll */}
       <div ref={mobileScrollRef} className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
         {/* Top Spacer to push content down initially */}
-        <div className="h-32 bg-white snap-start"></div>
+        <div className="h-20 bg-white snap-start"></div>
         
         {/* Sticky Name Header - sticks at top throughout scroll */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
@@ -495,14 +495,14 @@ export default function Home() {
         </div>
 
         {/* Header Section Content */}
-        <div className="px-6 pt-8 pb-16 space-y-6 bg-white">
+        <div className="px-6 pt-4 pb-4 space-y-6 bg-white">
             {/* About */}
             <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
+              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
               Currently: [Research] at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
