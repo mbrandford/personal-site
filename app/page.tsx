@@ -307,7 +307,21 @@ export default function Home() {
     if (window.innerWidth >= 1024) return;
 
     if (mobileScrollRef.current) {
+      // Force immediate scroll to top
       mobileScrollRef.current.scrollTop = 0;
+      
+      // Also force after a short delay to override Safari's scroll restoration
+      setTimeout(() => {
+        if (mobileScrollRef.current) {
+          mobileScrollRef.current.scrollTop = 0;
+        }
+      }, 0);
+      
+      setTimeout(() => {
+        if (mobileScrollRef.current) {
+          mobileScrollRef.current.scrollTop = 0;
+        }
+      }, 100);
     }
   }, []);
 
