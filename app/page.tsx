@@ -495,7 +495,7 @@ export default function Home() {
         </div>
 
         {/* Header Section Content */}
-        <div className="px-6 pt-4 pb-4 space-y-6 bg-white">
+        <div className="px-6 pt-6 pb-4 space-y-10 bg-white">
             {/* About */}
             <section className="space-y-2">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
@@ -538,7 +538,7 @@ export default function Home() {
           </div>
 
           {/* Divider */}
-          <div className="py-4 text-neutral-500 text-sm">
+          <div className="text-neutral-500 text-sm">
             ////////////////
           </div>
 
