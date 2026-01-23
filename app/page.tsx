@@ -369,7 +369,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
+              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide key decisions and drive company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Research at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
@@ -502,7 +502,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide critical decisions and drive company strategy.
+              I'm an Interdisciplinary Researcher charting the path forward for disruptive tech products. I lead end-to-end studies around product, marketing, and business questions to guide key decisions and drive company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Research at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
