@@ -354,13 +354,10 @@ export default function Home() {
   const displayProject = activeProject || lastActiveProjectRef.current;
 
   return (
-    <main className="min-h-screen w-full bg-white text-neutral-900 relative">
-      {/* Fixed gradient footer for desktop */}
-      <div className="hidden lg:block fixed bottom-0 left-0 right-0 h-[25vh] bg-[linear-gradient(to_top,#f9a8d4_0%,#fce7f3_8%,#fef7f7_15%,white_25%)] pointer-events-none z-0" style={{ background: 'linear-gradient(to top, #f9a8d4 0%, #fce7f3 7%, #fef7f7 15%, white 25%)' }}></div>
-      
+    <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative max-w-[1600px] mx-auto w-full z-10">
-        <div className="max-w-xl px-6 pt-16 pb-12 space-y-12 flex-grow bg-white relative" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
+      <div className="hidden lg:block relative max-w-[1600px] mx-auto w-full">
+        <div className="max-w-xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
           {/* Name */}
           <header className="space-y-2">
             <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
