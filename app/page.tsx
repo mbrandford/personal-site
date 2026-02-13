@@ -412,7 +412,7 @@ export default function Home() {
           {/* Projects */}
           <section className="space-y-3 mt-8">
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
-              Projects
+              some projects
             </h2>
 
             <div className="space-y-10">
@@ -553,7 +553,7 @@ export default function Home() {
         {/* Sticky Projects Header */}
         <div className={`sticky top-[34px] z-10 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
           <div className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
-            Projects
+            some projects
           </div>
         </div>
 
