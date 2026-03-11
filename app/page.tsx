@@ -71,7 +71,7 @@ export default function Home() {
           id: "2023-dev-mode",
           title: "Dev Mode",
           description:
-            "How should we pitch and position our first developer-oriented product? I spearheaded Dev Mode positioning and Sales strategy ahead of launch by running concept tests with designer and developer audiences and iterating on messaging to increase clarity, credibility, and relevance for new users.",
+            "How should we pitch and position our first developer-oriented product? I spearheaded Dev Mode positioning ahead of launch by running concept tests with designer and developer audiences and iterating on messaging to increase clarity, credibility, and relevance for new users.",
           mediaSrc: "/projects/dev-mode.mov",
         },
       ],
@@ -485,9 +485,9 @@ export default function Home() {
       </div>
 
       {/* Mobile Layout with Single Scroll */}
-      <div ref={mobileScrollRef} className="lg:hidden overflow-y-scroll snap-y snap-mandatory bg-white" style={{ height: '100dvh', overscrollBehaviorY: 'none' }}>
+      <div ref={mobileScrollRef} className="lg:hidden overflow-y-scroll bg-white" style={{ height: '100dvh', overscrollBehavior: 'none' }}>
         {/* Top Spacer to push content down initially */}
-        <div className="h-20 bg-white snap-start"></div>
+        <div className="h-20 bg-white"></div>
         
         {/* Sticky Name Header - sticks at top throughout scroll */}
         <div className={`sticky top-0 z-20 bg-white px-6 py-2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
@@ -574,7 +574,7 @@ export default function Home() {
             {group.items.map((project) => (
               <div
                 key={project.id}
-                className="min-h-[100dvh] snap-start flex flex-col justify-center py-8 bg-white"
+                className="min-h-[100dvh] flex flex-col justify-center py-8 bg-white"
               >
                 {/* Title Section */}
                 <div className="px-6 mb-4">
