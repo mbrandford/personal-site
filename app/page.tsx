@@ -357,7 +357,7 @@ export default function Home() {
     <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900">
       {/* Desktop Layout */}
       <div className="hidden lg:block relative max-w-[1600px] mx-auto w-full">
-        <div className="max-w-xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
+        <div className="max-w-2xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
           {/* Name */}
           <header className="space-y-2">
             <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
@@ -372,9 +372,9 @@ export default function Home() {
               I build systems that turn market signal into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
-               Currently: Research at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
+               Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
                <br />
-               Previously: Digital Product at <a href="https://nike.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Nike</a>, MBA Student at <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Berkeley Haas</a>, Insights at <a href="https://known.is" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Known</a>.
+               Previously: <a href="https://nike.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Nike</a>, <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Berkeley Haas</a>, <a href="https://known.is" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Known</a>
             </p>
           </section>
 
@@ -505,9 +505,9 @@ export default function Home() {
               I build systems that turn market signal into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
-               Currently: Research at <a href="https://figma.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Figma</a>
+               Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
                <br />
-               Previously: Digital Product at <a href="https://nike.com" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Nike</a>, MBA Student at <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Berkeley Haas</a>, Insights at <a href="https://known.is" target="_blank" rel="noreferrer" className="hover:text-neutral-700">Known</a>.
+               Previously: <a href="https://nike.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Nike</a>, <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Berkeley Haas</a>, <a href="https://known.is" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Known</a>
             </p>
           </section>
 
