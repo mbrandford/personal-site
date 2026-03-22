@@ -369,7 +369,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              I build systems and run studies that turn market signal into company strategy. At Figma, I lead the market intelligence function - where I shape the company's understanding of the product development landscape to inform where and how we invest next.
+              I run studies and build systems that turn market signals into company strategy. I lead market intelligence at Figma, where I help the company understand industry shifts to guide product and investment decisions.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
@@ -502,7 +502,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              I build systems and run studies that turn market signal into company strategy. At Figma, I lead the market intelligence function - where I shape the company's understanding of the product development landscape to inform where and how we invest next.
+              I run studies and build systems that turn market signals into company strategy. I lead market intelligence at Figma, where I help the company understand industry shifts to guide product and investment decisions.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
