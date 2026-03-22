@@ -369,7 +369,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
-              I build systems that turn market signal into company strategy.
+              I build systems and run research that turns market signal into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
@@ -502,7 +502,7 @@ export default function Home() {
               About
             </h2>
             <p className="text-lg leading-relaxed text-neutral-800">
-              I build systems that turn market signal into company strategy.
+              I build systems and run research that turns market signal into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
                Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
