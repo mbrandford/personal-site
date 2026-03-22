@@ -26,7 +26,7 @@ export default function Home() {
           id: "2025-figma-make",
           title: "Figma Make",
           description:
-            "How can Figma Make stand out in a quickly-shifting landscape of prompt-to-prototype AI tools? I ran a global study shortly after launch to map awareness, adoption, and perceptions across the competitive set, then built the positioning framework and associated product plan to resonate with new users and inflect growth.",
+            "How can Figma Make stand out in a quickly-shifting landscape of prompt-to-prototype AI tools? I built an early market view of the prompt-to-prototype AI landscape by combining global research on awareness, adoption, and competitive perceptions, then translated those findings into positioning and product investment priorities.",
           mediaSrc: "/projects/figma-make.mov",
         },
         {
