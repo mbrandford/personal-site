@@ -33,7 +33,7 @@ export default function Home() {
           id: "2025-figma-sites",
           title: "Figma Sites",
           description:
-            "How should we think about Figma Sites' growth beyond experienced designers? I led market analysis and concept testing with new audiences to surface gaps and differentiators versus key competitors, then developed the roadmap for competing and standing apart in the category.",
+            "How should Figma Sites grow beyond experienced designers? I led market analysis and concept testing with new audiences to identify gaps and differentiation opportunities versus key competitors, then translated those findings into product strategy and roadmap direction.",
           mediaSrc: "/projects/figma-sites.mov",
         },
       ],
@@ -45,21 +45,21 @@ export default function Home() {
           id: "2024-brand-tracker",
           title: "Figma brand tracker",
           description:
-            "What does Figma's target audience think about our brand? I lead Figma's ongoing brand tracker to measure perceptions across priority roles. The narratives serve as a company-wide signal of Figma's place in the hearts and minds of product builders and guide where we invest next.",
+            "What does Figma's target audience think about our brand and how are perceptions shifting? I lead Figma's ongoing brand tracker across priority roles, turning longitudinal data into a company-wide view of brand momentum, audience needs, and strategic investment implications.",
           mediaSrc: "/projects/figma-brand.mp4",
         },
         {
           id: "2024-figma-slides",
           title: "Figma Slides",
           description:
-            "Where does Figma's Slides tool fit in a market with juggernaut incumbents and innovative upstarts? I led product strategy and positioning for the launch of Figma Slides, building on research into audience needs and the competitive landscape across the full development arc, from early concept to enterprise-grade product.",
+            "Where should Figma Slides compete in a market shaped by entrenched incumbents and fast-moving challengers? I led product strategy and positioning for launch, drawing on research into audience needs and the competitive landscape to clarify where we could win and where to prioritize resources.",
           mediaSrc: "/projects/figma-slides.mov",
         },
         {
           id: "2024-figjam",
           title: "FigJam",
           description:
-            "How should FigJam serve users after the COVID-era expansion of whiteboard tools? I steered strategy and investment decisions by leading research with enterprise teams and buyers on the whiteboard landscape and purchasing patterns. This work identified differentiation opportunities, strengthened Sales enablement, and informed product focus areas that resonate with target customers.",
+            "How should FigJam evolve after the post-COVID reset in whiteboard software? I led research with enterprise teams and buyers to map the category, purchasing patterns, and whitespace opportunities, then used those insights to shape product focus, sales enablement, and team investment decisions.",
           mediaSrc: "/projects/figjam.mp4",
         },
       ],
@@ -71,7 +71,7 @@ export default function Home() {
           id: "2023-dev-mode",
           title: "Dev Mode",
           description:
-            "How should we pitch and position our first developer-oriented product? I spearheaded Dev Mode positioning ahead of launch by running concept tests with designer and developer audiences and iterating on messaging to increase clarity, credibility, and relevance for new users.",
+            "How should we position Figma's first developer product for a new audience? I led concept testing with designers and developers ahead of launch, then translated those findings into sharper positioning, launch planning, and adoption expectations for the team.",
           mediaSrc: "/projects/dev-mode.mov",
         },
       ],
@@ -357,7 +357,7 @@ export default function Home() {
     <main className="min-h-screen w-full bg-white lg:bg-[linear-gradient(to_bottom,white_0%,white_75%,#fef7f7_85%,#fce7f3_92%,#f9a8d4_100%)] text-neutral-900">
       {/* Desktop Layout */}
       <div className="hidden lg:block relative max-w-[1600px] mx-auto w-full">
-        <div className="max-w-2xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
+        <div className="max-w-xl px-6 pt-16 pb-12 space-y-12 flex-grow" style={{ marginLeft: 'clamp(10px, 12vw, 200px)' }}>
           {/* Name */}
           <header className="space-y-2">
             <h1 className="text-sm font-medium tracking-tight">Marcus Brandford</h1>
