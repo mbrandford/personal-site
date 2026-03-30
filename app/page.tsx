@@ -368,7 +368,7 @@ export default function Home() {
             <h2 className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
               About
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-neutral-800">
+            <p className="text-lg md:text-xl leading-relaxed text-neutral-800 max-w-[340px]">
               I run studies and build systems that turn market signals into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
