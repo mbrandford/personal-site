@@ -372,7 +372,7 @@ export default function Home() {
               Hey, I'm Marcus. I run studies and build systems that translate market signals into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
-               Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
+               Currently: user researcher at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
                <br />
                Previously: <a href="https://nike.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Nike</a>, <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Berkeley Haas</a>, <a href="https://known.is" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Known</a>
             </p>
@@ -505,7 +505,7 @@ export default function Home() {
               Hey, I'm Marcus. I run studies and build systems that translate market signals into company strategy.
             </p>
             <p className="text-sm leading-relaxed text-neutral-500 pt-2">
-               Currently: Market Intelligence at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
+               Currently: user researcher at <a href="https://figma.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Figma</a>
                <br />
                Previously: <a href="https://nike.com" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Nike</a>, <a href="https://haas.berkeley.edu" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Berkeley Haas</a>, <a href="https://known.is" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-neutral-700">Known</a>
             </p>
