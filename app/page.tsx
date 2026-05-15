@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+function mediaPosterUrl(mediaSrc: string) {
+  return mediaSrc.replace(/\.mp4$/i, ".jpg");
+}
+
 export default function Home() {
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -27,14 +31,14 @@ export default function Home() {
           title: "Figma Make",
           description:
             "How can Figma Make stand out in a quickly-shifting landscape of prompt-to-prototype AI tools? I built an early market view of the prompt-to-prototype AI landscape by combining global research on awareness, adoption, and competitive perceptions, then translated those findings into positioning and product investment priorities.",
-          mediaSrc: "/projects/figma-make.mov",
+          mediaSrc: "/projects/web/figma-make.mp4",
         },
         {
           id: "2025-figma-sites",
           title: "Figma Sites",
           description:
             "How should Figma Sites grow beyond experienced designers? I led market analysis and concept testing with new audiences to identify gaps and differentiation opportunities versus key competitors, then translated those findings into product strategy and roadmap direction.",
-          mediaSrc: "/projects/figma-sites.mov",
+          mediaSrc: "/projects/web/figma-sites.mp4",
         },
       ],
     },
@@ -46,21 +50,21 @@ export default function Home() {
           title: "Figma brand tracker",
           description:
             "What does Figma's target audience think about our brand and how are perceptions shifting? I lead Figma's ongoing brand tracker across priority roles, turning longitudinal data into a company-wide view of brand momentum, audience needs, and strategic investment implications.",
-          mediaSrc: "/projects/figma-brand.mp4",
+          mediaSrc: "/projects/web/figma-brand.mp4",
         },
         {
           id: "2024-figma-slides",
           title: "Figma Slides",
           description:
             "Where should Figma Slides compete in a market shaped by entrenched incumbents and fast-moving challengers? I led product strategy and positioning for launch, drawing on research into audience needs and the competitive landscape to clarify where we could win and where to prioritize resources.",
-          mediaSrc: "/projects/figma-slides.mov",
+          mediaSrc: "/projects/web/figma-slides.mp4",
         },
         {
           id: "2024-figjam",
           title: "FigJam",
           description:
             "How should FigJam evolve after the post-COVID reset in whiteboard software? I led research with enterprise teams and buyers to map the category, purchasing patterns, and whitespace opportunities, then used those insights to shape product focus, sales enablement, and team investment decisions.",
-          mediaSrc: "/projects/figjam.mp4",
+          mediaSrc: "/projects/web/figjam.mp4",
         },
       ],
     },
@@ -72,7 +76,7 @@ export default function Home() {
           title: "Dev Mode",
           description:
             "How should we position Figma's first developer product for a new audience? I led concept testing with designers and developers ahead of launch, then translated those findings into sharper positioning, launch planning, and adoption expectations for the team.",
-          mediaSrc: "/projects/dev-mode.mov",
+          mediaSrc: "/projects/web/dev-mode.mp4",
         },
       ],
     },
@@ -84,7 +88,7 @@ export default function Home() {
           title: "Figma.com",
           description:
             "How can we evolve our marketing site to better resonate with leads and convert prospects into users? I supported the Figma.com rebuild by running research sessions with target audiences to shape information hierarchy, language, and page flows, improving how the site communicates core value and drives conversion.",
-          mediaSrc: "/projects/figmadotcom.mov",
+          mediaSrc: "/projects/web/figmadotcom.mp4",
         },
       ],
     },
@@ -96,7 +100,7 @@ export default function Home() {
           title: "Nike.com search",
           description:
             "What additional value can we deliver to shoppers through search? I led a cross-functional team across Engineering, Design, and Data Science to roadmap and ship improved results for the most common search intents.",
-          mediaSrc: "/projects/nike-search.mov",
+          mediaSrc: "/projects/web/nike-search.mp4",
         },
       ],
     },
@@ -108,7 +112,7 @@ export default function Home() {
           title: "Waze",
           description:
             "What should Waze consider as it prepares to launch its carpool service internationally? I drove foundational audience and market understanding by developing global segmentation and a GTM strategy. I conducted interviews across three countries and ran a 12k-person survey to quantify needs and opportunity.",
-          mediaSrc: "/projects/waze.mov",
+          mediaSrc: "/projects/web/waze.mp4",
         },
       ],
     },
@@ -120,7 +124,7 @@ export default function Home() {
           title: "Google Assistant",
           description:
             "How can Google grow and differentiate its AI assistant against first-movers Alexa and Siri? I identified the value propositions and use cases that resonated most for Google Assistant relative to competitors, and ran 30+ creative focus groups across the US.",
-          mediaSrc: "/projects/google-assistant.mov",
+          mediaSrc: "/projects/web/google-assistant.mp4",
         },
       ],
     },
@@ -132,7 +136,7 @@ export default function Home() {
           title: "Google Cloud",
           description:
             "How can Google Cloud compete against Microsoft Azure and AWS? I created international sales enablement strategy and competitive positioning for Google Cloud. I conducted ~80 customer interviews, then translated findings into a field narrative adopted by Sales teams across North America and EMEA.",
-          mediaSrc: "/projects/google-cloud.mov",
+          mediaSrc: "/projects/web/google-cloud.mp4",
         },
       ],
     },
@@ -473,11 +477,13 @@ export default function Home() {
               <video
                 key={displayProject.id}
                 src={displayProject.mediaSrc}
+                poster={mediaPosterUrl(displayProject.mediaSrc)}
                 className="w-full h-auto"
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
               />
             </div>
           )}
@@ -589,6 +595,7 @@ export default function Home() {
                     ref={setMobileVideoRef(project.id)}
                     data-video-id={project.id}
                     src={project.mediaSrc}
+                    poster={mediaPosterUrl(project.mediaSrc)}
                     className="w-[90%] h-auto rounded-lg shadow-lg"
                     loop
                     muted
